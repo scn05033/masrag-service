@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>감성 음악 생성</title></head>
+<body style="font-family:sans-serif; padding:20px;">
+  <h2>이미지 → 감성 음악 가사 생성</h2>
+  <form action="http://127.0.0.1:8000/create-song" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required><br><br>
+    <label><input type="checkbox" name="use_mas" checked> MAS 협업 활성화</label><br>
+    <label>라운드: <input type="number" name="rounds" value="1" min="1" max="2"></label><br>
+    <label>Top K: <input type="number" name="top_k" value="3" min="1" max="5"></label><br><br>
+    <button type="submit">가사 생성</button>
+  </form>
+</body>
+</html>
